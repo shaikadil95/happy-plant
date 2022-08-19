@@ -4,6 +4,9 @@ WORKDIR /code
 
 RUN pip3 install --upgrade \
   pip \
+  cryptography==3.3.2\
+  setuptools \
+  wheel\
   RPi.GPIO \
   automationhat \
   fastapi \

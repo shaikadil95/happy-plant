@@ -21,7 +21,7 @@ def water_stable():
 def water_for(watering_duration: int):
     print("Turning ON Pump")
     automationhat.relay.one.on()
-    time.sleep({watering_duration})
+    time.sleep(watering_duration)
     print("Turning OFF Pump")
     automationhat.relay.one.off()
-    return {"status": "succes", "message": "plants watered for {watering_duration} sec"}
+    return {"status": "succes", "message": f"plants watered for {watering_duration} sec"}
