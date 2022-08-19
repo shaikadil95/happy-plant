@@ -116,12 +116,12 @@ class PlantSaver:
     # Pump water
     def pump_water(self, action):
         if action == True:
-            automationhat.relay.one.on()
-            print ("pump on")
+            #automationhat.relay.one.on()
+            print ("automated pump on")
             self.pumping = True
         else:
-            print ("pump off")
-            automationhat.relay.one.off()
+            print ("auomated pump off")
+            #automationhat.relay.one.off()
             self.pumping = False
 
     # Refresh the relevant things - designed to be run once every 10 seconds

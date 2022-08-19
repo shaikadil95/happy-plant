@@ -24,6 +24,11 @@ services:
     network_mode: host
     labels:
       io.balena.features.balena-api: '1'
+  pumpservice:
+    build: ./pump_service
+    privileged: true
+    restart: always
+    network_mode: host
   connector:
     image: balenablocks/connector:raspberrypi3
     restart: always
