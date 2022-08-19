@@ -1,5 +1,11 @@
 FROM balenalib/raspberry-pi-python:3.7-buster
 
+RUN apt-get update
+
+RUN apt-get install build-essential libssl-dev libffi-dev python-dev
+
+RUN apt-get install python3-smbus
+
 WORKDIR /code
 
 RUN pip3 install --upgrade \
@@ -7,6 +13,7 @@ RUN pip3 install --upgrade \
   cryptography==3.3.2\
   setuptools \
   wheel\
+  smbus2 \
   RPi.GPIO \
   automationhat \
   fastapi \
